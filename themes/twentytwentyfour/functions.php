@@ -204,10 +204,3 @@ if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
 endif;
 
 add_action( 'init', 'twentytwentyfour_pattern_categories' );
-
-
-
-// Custom Vite integration: custom/functions.php만 로드
-if ( file_exists( get_template_directory() . '/custom/functions.php' ) ) {
-    require_once get_template_directory() . '/custom/functions.php';
-}

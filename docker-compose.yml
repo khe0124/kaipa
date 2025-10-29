@@ -3,27 +3,33 @@ services:
     image: wordpress:6.5-php8.2-apache
     container_name: wp-dev
     ports:
-      - '8000:80'
+      - "8000:80"
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
     volumes:
-      - ./wp:/var/www/html
-      - ./themes:/var/www/html/wp-content/themes
-      - ./plugins:/var/www/html/wp-content/plugins
+      - ./wp-content:/var/www/html/wp-content
+    depends_on:
+      - db
 
   db:
-    # ✅ 여기 이름이 핵심
-    image: mysql:8.0
+    image: mysql:5.7
     container_name: wp-db
     environment:
-      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: root
     volumes:
-      - db_data:/var/lib/mysql
-volumes:
-  db_data:
+      - ./data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: wp-phpmyadmin
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8081:80"
