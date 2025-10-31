@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: React Custom Page
+Template Name: About Page
 */
 
 get_header(); ?>
