@@ -1,13 +1,18 @@
 <?php
 
 function custom_theme_is_dev_mode(): bool {
-    // 네트워크 의존 제거: 명시적 플래그/환경만으로 결정
-    if ( isset($_GET['viteDev']) && $_GET['viteDev'] === '1' ) return true;
-    if ( defined('VITE_DEV') && constant('VITE_DEV') ) return true;
-    // if ( defined('WP_ENVIRONMENT_TYPE') && WP_ENVIRONMENT_TYPE === 'development' ) return true;
-    if ( function_exists('wp_get_environment_type') && wp_get_environment_type() === 'development' ) return true;
-    if ( defined('WP_DEBUG') && WP_DEBUG ) return true;
-    if ( defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ) return true;
+    if ( isset($_GET['viteDev']) && $_GET['viteDev'] === '1' ) {
+        return true;
+    }
+    if ( defined('VITE_DEV') && constant('VITE_DEV') ) {
+        return true;
+    }
+    if ( function_exists('wp_get_environment_type') && wp_get_environment_type() === 'development' ) {
+        return true;
+    }
+    if ( defined('WP_DEBUG') && WP_DEBUG ) {
+        return true;
+    }
     return false;
 }
 
