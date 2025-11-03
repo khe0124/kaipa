@@ -8,6 +8,7 @@ import MentorDetail from "./pages/MentorDetail.jsx";
 import CaseStudy from "./pages/CaseStudy.jsx";
 import Blog from "./pages/Blog.jsx";
 import Home from "./Home.jsx";
+import Contact from "./pages/Contact.jsx";
 
 console.log("[Vite] main.jsx loaded");
 
@@ -29,6 +30,7 @@ mountIfExists("mentor-list-page", <MentorList />);
 mountIfExists("mentor-detail-page", <MentorDetail />);
 mountIfExists("case-study-page", <CaseStudy />);
 mountIfExists("blog-page", <Blog />);
+mountIfExists("contact-page", <Contact />);
 
 if (import.meta.hot) {
   import.meta.hot.accept();
