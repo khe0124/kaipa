@@ -1,0 +1,38 @@
+# Node
+node_modules
+
+# macOS
+.DS_Store
+
+# Env/IDE
+.env
+.env.*
+.vscode/
+.idea/
+
+# WordPress runtime (docker bind mount)
+wp/
+wp/**
+wp-config.php
+wp-content/uploads/
+
+# Project-level Docker artifacts
+db_data/
+
+# WordPress plugins (keep only custom plugins explicitly)
+plugins/**
+!plugins/.gitkeep
+
+# Themes build artifacts (keep sources; ignore build outputs and deps)
+themes/**/dist/
+themes/**/node_modules/
+themes/**/.cache/
+themes/**/.vite/
+themes/**/coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
