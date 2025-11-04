@@ -3,8 +3,13 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./style.css";
 import About from "./pages/About.jsx";
-import MentorList from "./pages/MentorList.jsx";
-import MentorDetailPage from "./pages/MentorDetail.jsx";
+import Introduce from "./pages/Introduce.jsx";
+import ExpertList from "./pages/ExpertList.jsx";
+import ExpertDetailPage from "./pages/ExpertDetail.jsx";
+import AIEdu from "./pages/AIEdu.jsx";
+import AIExpert from "./pages/AIExpert.jsx";
+import AINetworking from "./pages/AINetworking.jsx";
+
 import CaseStudy from "./pages/CaseStudy.jsx";
 import Blog from "./pages/Blog.jsx";
 import Home from "./Home.jsx";
@@ -33,10 +38,20 @@ function mountIfExists(targetId, element) {
 function initializeApp() {
   console.log("[Vite] Initializing React apps...");
   mountIfExists("root", <App />);
+  /* 홈화면 */
   mountIfExists("home", <Home />);
-  mountIfExists("about-page", <About />);
-  mountIfExists("mentor-list-page", <MentorList />);
-  mountIfExists("mentor-detail-page", <MentorDetailPage />);
+  /* 소개화면 */
+  mountIfExists("introduce-page", <Introduce />);
+  /* 전문가 목록 화면 */
+  mountIfExists("expert-list-page", <ExpertList />);
+  mountIfExists("expert-detail-page", <ExpertDetailPage />);
+  /* AI 교육 화면 */
+  mountIfExists("ai-edu-page", <AIEdu />);
+  /* AI 전문가 화면 */
+  mountIfExists("ai-expert-page", <AIExpert />);
+  /* AI 네트워킹 화면 */
+  mountIfExists("ai-networking-page", <AINetworking />);
+
   mountIfExists("case-study-page", <CaseStudy />);
   mountIfExists("blog-page", <Blog />);
   mountIfExists("contact-page", <Contact />);
