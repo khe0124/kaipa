@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Icon01 from "../../images/icon_01.svg";
 import Icon02 from "../../images/icon_02.svg";
 import Icon03 from "../../images/icon_03.svg";
+import Edu01 from "../../images/edu_01.png";
+import Edu02 from "../../images/edu_02.png";
 
 export default function AIEduPage() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -80,23 +82,19 @@ export default function AIEduPage() {
               한국AI진흥원은
             </h2>
 
-            <div className="space-y-4 md:space-y-6">
+            <div className="space-y-4 md:space-y-2">
               <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
-                인공지능을 단순한 기술이 아닌 사회·산업 전반을 혁신하는 핵심
-                역량으로 보고 있습니다.
-              </p>
-
-              <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
-                이에 따라 학생, 직장인, 연구자, 일반 시민 누구나 AI를 이해하고
-                활용할 수 있도록 체계적이고 실용적인 AI 교육 프로그램을
-                운영합니다.
+                {` 인공지능을 단순한 기술이 아닌 사회·산업 전반을 혁신하는 핵심
+                역량으로 보고 있습니다. 이에 따라 학생, 직장인, 연구자, 일반
+                시민 누구나 AI를 이해하고 활용할 수 있도록 체계적이고 실용적인
+                AI 교육 프로그램을 운영합니다.`}
               </p>
             </div>
           </div>
 
           {/* 프로그램 섹션 */}
           <div className="mb-12 md:mb-16">
-            <h2 className="text-gray-900 md:text-4xl text-2xl font-bold mb-8 md:mb-12">
+            <h2 className="text-gray-900 md:text-2xl text-xl font-bold mb-4 md:mb-6">
               프로그램
             </h2>
 
@@ -106,13 +104,8 @@ export default function AIEduPage() {
                   key={item.title}
                   className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100"
                 >
-                  <div className="flex items-center gap-3 mb-4 md:mb-6">
-                    <img
-                      src={item.icon}
-                      alt={item.title}
-                      className="w-10 h-10 md:w-12 md:h-12"
-                    />
-                    <h3 className="text-slate-800 md:text-2xl text-xl font-bold">
+                  <div className="flex items-center justify-center gap-3 mb-4 md:mb-6 bg-main-25 rounded-xl p-2">
+                    <h3 className="text-main-500 text-base font-bold text-center">
                       {item.title}
                     </h3>
                   </div>
@@ -129,31 +122,54 @@ export default function AIEduPage() {
 
           {/* 맞춤형 교육 섹션 */}
           <div className="mb-12 md:mb-16">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 md:p-8">
-              <h2 className="text-gray-900 md:text-3xl text-2xl font-bold mb-4 md:mb-6">
-                맞춤형 교육
-              </h2>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-main-500 text-xl mt-1">•</span>
-                  <span className="text-gray-700 md:text-base text-sm font-light">
+            <h2 className="text-gray-900 md:text-2xl text-xl font-bold mb-4 md:mb-6">
+              맞춤형 교육
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                <img
+                  src={Edu01}
+                  alt="기업/기관 맞춤형 사내 교육 프로그램"
+                  className="w-full h-32 md:h-48 object-cover"
+                />
+                <div className="p-6 md:p-8">
+                  <h3 className="text-gray-700 md:text-base text-sm font-bold leading-relaxed mb-4">
                     기업/기관 맞춤형 사내 교육 프로그램
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-main-500 text-xl mt-1">•</span>
-                  <span className="text-gray-700 md:text-base text-sm font-light">
+                  </h3>
+                  <p className="text-gray-700 md:text-sm text-xs font-light leading-relaxed">
+                    AI 기술을 조직의 실무에 직접 적용할 수 있도록, 기업의 산업
+                    특성과 수준에 맞춘 맞춤형 커리큘럼을 제공합니다. 기초
+                    인공지능 이해부터 데이터 분석·자동화·생성형 AI 활용까지,
+                    실무 중심의 워크숍형 교육으로 직원들의 역량을 빠르게
+                    강화합니다.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                <img
+                  src={Edu02}
+                  alt="공공기관·학교와 협력한 특별 과정 운영"
+                  className="w-full h-32 md:h-48 object-cover"
+                />
+                <div className="p-6 md:p-8">
+                  <h3 className="text-gray-700 md:text-base text-sm font-bold leading-relaxed mb-4">
                     공공기관·학교와 협력한 특별 과정 운영
-                  </span>
-                </li>
-              </ul>
+                  </h3>
+                  <p className="text-gray-700 md:text-sm text-xs font-light leading-relaxed">
+                    공공기관과 교육기관을 위한 사회 맞춤형 AI 교육 과정을
+                    기획·운영합니다. 청소년, 대학생, 공무원 등 다양한 대상에게
+                    AI 리터러시와 실습 중심의 프로젝트 교육을 제공하여, 현장
+                    중심의 인재 양성을 지원합니다.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 자주 묻는 질문 섹션 */}
-      <section className="bg-gray-50 py-12 md:py-20">
+      <section className="bg-gray-50 pb-12 md:pb-20">
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-gray-900 md:text-4xl text-2xl font-bold mb-8 md:mb-12 text-center">

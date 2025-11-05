@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Service01 from "../../images/service_01.png";
+import Service02 from "../../images/service_02.png";
+import Service03 from "../../images/service_03.png";
 
 export default function AINetworkingPage() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -65,6 +68,127 @@ export default function AINetworkingPage() {
                 우리는 회원들이 서로 연결되고, 함께 배우며, 협력할 수 있도록
                 다양한 네트워킹 플랫폼과 행사를 운영합니다.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 네트워킹 프로그램 섹션 */}
+      <section className="container mx-auto px-4 md:px-8 py-12 md:py-20">
+        <div className="max-w-6xl mx-auto space-y-12 md:space-y-16">
+          {/* Section 1 - 함께 성장하는 AI 커뮤니티 */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-200">
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/2 flex-shrink-0">
+                <img
+                  src={Service01}
+                  alt="함께 성장하는 AI 커뮤니티"
+                  className="w-full h-full object-cover min-h-[300px] md:min-h-[400px]"
+                />
+              </div>
+              <div className="md:w-1/2 p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+                <div className="mb-4">
+                  <h2 className="text-gray-900 md:text-3xl text-2xl font-bold mb-3">
+                    함께 성장하는 AI 커뮤니티
+                  </h2>
+                  <h3 className="text-gray-700 md:text-xl text-lg font-semibold mb-4">
+                    누구나 참여할 수 있는 열린 AI 생태계
+                  </h3>
+                </div>
+                <div className="space-y-4 mb-6">
+                  <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
+                    AI에 관심 있는 누구나 지식과 경험을 공유할 수 있는
+                    커뮤니티를 운영합니다.
+                  </p>
+                  <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
+                    전문가와 연구자, 일반 시민이 한자리에 모여 실시간 토론, 오픈
+                    포럼, 온라인 커뮤니티를 통해 서로의 성장 여정을 이어갑니다.
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button className="bg-main-500 hover:bg-main-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-sm md:text-base">
+                    커뮤니티 가입하기
+                  </button>
+                  <button className="bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-sm md:text-base">
+                    멤버십 안내 보기
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 2 - 협력과 혁신의 장, AI 네트워킹 행사 */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-200">
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/2 flex-shrink-0 md:order-2">
+                <img
+                  src={Service02}
+                  alt="협력과 혁신의 장, AI 네트워킹 행사"
+                  className="w-full h-full object-cover min-h-[300px] md:min-h-[400px]"
+                />
+              </div>
+              <div className="md:w-1/2 p-6 md:p-8 lg:p-12 flex flex-col justify-center md:order-1">
+                <div className="mb-4">
+                  <h2 className="text-gray-900 md:text-3xl text-2xl font-bold mb-3">
+                    협력과 혁신의 장, AI 네트워킹 행사
+                  </h2>
+                  <h3 className="text-gray-700 md:text-xl text-lg font-semibold mb-4">
+                    사람이 모이면, 혁신이 시작됩니다
+                  </h3>
+                </div>
+                <div className="space-y-4 mb-6">
+                  <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
+                    정기적으로 열리는 'AI 네트워킹 데이', '오픈 세미나', '산학연
+                    포럼'을 통해 참여자들이 실제 협업의 기회를 만들고, 새로운
+                    아이디어를 교환합니다.
+                  </p>
+                  <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
+                    단순한 만남을 넘어, 연구·산업 협력으로 이어지는 실질적
+                    네트워크를 지원합니다.
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button className="bg-main-500 hover:bg-main-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-sm md:text-base">
+                    다음 행사 일정 보기
+                  </button>
+                  <button className="bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-sm md:text-base">
+                    행사 후기 보기
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 3 - 지식 공유 플랫폼 */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-200">
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/2 flex-shrink-0">
+                <img
+                  src={Service03}
+                  alt="지식 공유 플랫폼"
+                  className="w-full h-full object-cover min-h-[300px] md:min-h-[400px]"
+                />
+              </div>
+              <div className="md:w-1/2 p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+                <div className="mb-4">
+                  <h2 className="text-gray-900 md:text-3xl text-2xl font-bold mb-3">
+                    지식 공유 플랫폼
+                  </h2>
+                  <h3 className="text-gray-700 md:text-xl text-lg font-semibold mb-4">
+                    AI 지식, 함께 배우고 나누는 곳
+                  </h3>
+                </div>
+                <div className="space-y-4 mb-6">
+                  <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
+                    회원들이 직접 최신 AI 트렌드, 논문, 프로젝트 인사이트를
+                    공유할 수 있는 온라인 플랫폼을 운영합니다.
+                  </p>
+                  <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
+                    누구나 쉽게 배우고, 실무에 적용할 수 있도록 세미나
+                    다시보기·AI 리포트·교육 콘텐츠를 지속적으로 업데이트합니다.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -3,25 +3,30 @@ import Icon01 from "../images/icon_01.svg";
 import Icon02 from "../images/icon_02.svg";
 import Icon03 from "../images/icon_03.svg";
 
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
+import HubOutlinedIcon from "@mui/icons-material/HubOutlined";
+import IconButton from "@mui/material/IconButton";
+
 export default function Introduce() {
   const coreValueList = [
     {
       title: "Innovation",
       koreanTitle: "혁신",
       description: "AI 기술의 최전선에서\n새로운 가능성을 창조합니다.",
-      icon: Icon01,
+      icon: <LightModeOutlinedIcon />,
     },
     {
       title: "Education",
       koreanTitle: "교육",
       description: "체계적인 AI 교육으로\n미래인재를 양성합니다.",
-      icon: Icon02,
+      icon: <SchoolOutlinedIcon />,
     },
     {
       title: "Connection",
       koreanTitle: "연결",
       description: "기업 학계 정부를 하나로\n이어 시너지를 만듭니다.",
-      icon: Icon03,
+      icon: <HubOutlinedIcon />,
     },
   ];
 
@@ -99,22 +104,18 @@ export default function Introduce() {
                   key={item.title}
                   className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-2xl transition-all duration-300"
                 >
-                  <div className="flex items-center gap-3 mb-4 md:mb-6">
-                    <img
-                      src={item.icon}
-                      alt={item.title}
-                      className="w-10 h-10 md:w-12 md:h-12"
-                    />
-                    <div>
-                      <h3 className="text-slate-800 md:text-2xl text-xl font-bold">
+                  <div className="flex flex-col items-center justify-center gap-3 mb-4 md:mb-6">
+                    <IconButton>{item.icon}</IconButton>
+                    <div className="flex flex-col items-center justify-center">
+                      <h3 className="text-slate-800 md:text-2xl text-xl font-bold text-center">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600 md:text-base text-sm font-semibold">
+                      <p className="text-gray-600 md:text-base text-sm font-semibold text-center">
                         {item.koreanTitle}
                       </p>
                     </div>
                   </div>
-                  <p className="text-gray-700 md:text-base text-sm font-light whitespace-pre-wrap leading-relaxed">
+                  <p className="text-gray-700 md:text-base text-sm text-center font-light whitespace-pre-wrap leading-relaxed">
                     {item.description}
                   </p>
                 </div>

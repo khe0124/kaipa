@@ -3,6 +3,11 @@ import Icon01 from "../../images/icon_01.svg";
 import Icon02 from "../../images/icon_02.svg";
 import Icon03 from "../../images/icon_03.svg";
 import Icon04 from "../../images/icon_04.svg";
+import EventNoteOutlinedIcon from "@mui/icons-material/EventNoteOutlined";
+import SpeakerNotesOutlinedIcon from "@mui/icons-material/SpeakerNotesOutlined";
+import WorkspacePremiumOutlinedIcon from "@mui/icons-material/WorkspacePremiumOutlined";
+import Diversity3OutlinedIcon from "@mui/icons-material/Diversity3Outlined";
+import IconButton from "@mui/material/IconButton";
 
 export default function AIExpertPage() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -15,7 +20,7 @@ export default function AIExpertPage() {
         "실습형 워크숍, 프로젝트 기반 학습 설계",
         "AI 도구(Figma, ChatGPT, 영상편집 AI 등) 활용한 교안 제작",
       ],
-      icon: Icon01,
+      icon: <EventNoteOutlinedIcon />,
     },
     {
       title: "강의 실습 & 피드백 세션",
@@ -23,7 +28,7 @@ export default function AIExpertPage() {
         "모의 강의 진행 → 피드백 → 개선",
         "카메라 앞 강의, 대면 강의, 온라인 강의 등 다양한 상황 실습",
       ],
-      icon: Icon02,
+      icon: <SpeakerNotesOutlinedIcon />,
     },
     {
       title: "전문 강사 인증 프로그램",
@@ -31,7 +36,7 @@ export default function AIExpertPage() {
         '최종 평가(강의 시연, 커리큘럼 설계안 제출) 후 "AI 교육 강사 인증서" 발급',
         "인증 강사는 협회 주최 교육, 외부 기관 위탁 교육에 참여 기회 제공",
       ],
-      icon: Icon03,
+      icon: <WorkspacePremiumOutlinedIcon />,
     },
     {
       title: "커리어 지원 & 강사 네트워크",
@@ -40,7 +45,7 @@ export default function AIExpertPage() {
         "기업/기관/학교 강의 매칭 기회 제공",
         "정기 강사 워크숍, 커뮤니티 교류",
       ],
-      icon: Icon04,
+      icon: <Diversity3OutlinedIcon />,
     },
   ];
 
@@ -90,13 +95,10 @@ export default function AIExpertPage() {
               <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
                 한국AI진흥원은 AI 리터러시 확산과 교육 저변 확대를 위해, 단순한
                 기술 습득을 넘어 AI를 가르칠 수 있는 전문가(트레이너, 강사)를
-                양성합니다.
-              </p>
-
-              <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
-                AI 교육 강사 과정은 체계적인 교육 방법론, 커리큘럼 설계, 강의
-                실습까지 포함하여, 기업·기관·학교 등 다양한 현장에서 AI 교육을
-                직접 주도할 수 있는 인재를 배출하는 것을 목표로 합니다.
+                양성합니다. AI 교육 강사 과정은 체계적인 교육 방법론, 커리큘럼
+                설계, 강의 실습까지 포함하여, 기업·기관·학교 등 다양한 현장에서
+                AI 교육을 직접 주도할 수 있는 인재를 배출하는 것을 목표로
+                합니다.
               </p>
             </div>
           </div>
@@ -110,11 +112,28 @@ export default function AIExpertPage() {
                   className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100"
                 >
                   <div className="flex items-center gap-3 mb-4 md:mb-6">
-                    <img
-                      src={item.icon}
-                      alt={item.title}
-                      className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0"
-                    />
+                    <IconButton
+                      color="primary"
+                      sx={{
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "50%",
+                        backgroundColor: "#E5E7EB",
+                        color: "#1F2937",
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        border: "1px solid #E5E7EB",
+                        "&:hover": {
+                          backgroundColor: "#E5E7EB",
+                          color: "#1F2937",
+                        },
+                      }}
+                    >
+                      {item.icon}
+                    </IconButton>
                     <h3 className="text-slate-800 md:text-2xl text-xl font-bold">
                       {item.title}
                     </h3>
@@ -122,9 +141,8 @@ export default function AIExpertPage() {
                   <ul className="space-y-3">
                     {item.items.map((listItem, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <span className="text-main-500 text-lg mt-1">•</span>
                         <span className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
-                          {listItem}
+                          • {listItem}
                         </span>
                       </li>
                     ))}

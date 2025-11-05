@@ -2,18 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./style.css";
-import About from "./pages/About.jsx";
 import Introduce from "./pages/Introduce.jsx";
 import ExpertList from "./pages/ExpertList.jsx";
 import ExpertDetailPage from "./pages/ExpertDetail.jsx";
-import AIEdu from "./pages/AIEdu.jsx";
-import AIExpert from "./pages/AIExpert.jsx";
-import AINetworking from "./pages/AINetworking.jsx";
+import AIEdu from "./pages/biz/AIEdu.jsx";
+import AIExpert from "./pages/biz/AIExpert.jsx";
+import AINetworking from "./pages/biz/AINetworking.jsx";
 
-import CaseStudy from "./pages/CaseStudy.jsx";
-import Blog from "./pages/Blog.jsx";
+import Blog from "./pages/news/Blog.jsx";
 import Home from "./Home.jsx";
-import Contact from "./pages/Contact.jsx";
+import Contact from "./pages/components/ContactForm.jsx";
 
 console.log("[Vite] main.jsx loaded");
 
@@ -52,7 +50,6 @@ function initializeApp() {
   /* AI 네트워킹 화면 */
   mountIfExists("ai-networking-page", <AINetworking />);
 
-  mountIfExists("case-study-page", <CaseStudy />);
   mountIfExists("blog-page", <Blog />);
   mountIfExists("contact-page", <Contact />);
 }
