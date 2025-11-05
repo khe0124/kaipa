@@ -66,20 +66,20 @@ export default function Introduce() {
 
           {/* 설립 목적 및 주요 활동 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <div className="bg-slate-50 rounded-xl p-6 md:p-8">
-              <h3 className="text-slate-800 md:text-2xl text-xl font-bold mb-4">
+            <div className="bg-slate-50 rounded-xl p-6 md:p-8 border border-main-500">
+              <h3 className="text-slate-800 text-center md:text-2xl text-xl font-bold mb-4">
                 설립 목적
               </h3>
-              <p className="text-gray-700 md:text-base text-sm font-light">
+              <p className="text-gray-700 text-center md:text-base text-sm font-light">
                 한국 내 AI 교육 확산, 산업 발전 기여
               </p>
             </div>
 
-            <div className="bg-slate-50 rounded-xl p-6 md:p-8">
-              <h3 className="text-slate-800 md:text-2xl text-xl font-bold mb-4">
+            <div className="bg-slate-50 rounded-xl p-6 md:p-8 border border-main-500">
+              <h3 className="text-slate-800 text-center md:text-2xl text-xl font-bold mb-4">
                 주요 활동
               </h3>
-              <p className="text-gray-700 md:text-base text-sm font-light">
+              <p className="text-gray-700 text-center md:text-base text-sm font-light">
                 교육, 컨퍼런스, 정책 제안, 기업·학계·정부 연계
               </p>
             </div>
