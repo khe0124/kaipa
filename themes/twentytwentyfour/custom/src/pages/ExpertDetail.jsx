@@ -12,8 +12,8 @@ const mentorDetailData = {
     introduction:
       "AI는 이제 전 세계가 공유하는 공용 언어가 되었습니다.\n최신 글로벌 트렌드와 산업별 흐름을 이해하기 쉽게 풀어내고,\n국내 현실에 맞게 설명합니다. 데이터와 자동화 분야의 전문성을\n바탕으로, 수강생이 넓은 시야를 가질 수 있도록 돕습니다.",
     education: "한국교통대학교 전기공학전공 학사",
-    email: "kogi@sangsangcity.com",
-    phone: "010-5211-3420",
+    email: "kaipakorea.info@gmail.com",
+    phone: "010-9617-7768",
     youtube: "https://www.youtube.com/@aijeong",
     career: [
       { title: "한국교통대학교 전기공학전공 학사", period: "" },
@@ -66,7 +66,7 @@ const mentorDetailData = {
     name: "권순현",
     introduction: "멘토 소개",
     education: "수원대학교 화학공학과 학사",
-    email: "kogi@sangsangcity.com",
+    email: "kaipakorea.info@gmail.com",
     phone: "010-5211-3420",
     youtube: "https://www.youtube.com/@aijeong",
     career: [

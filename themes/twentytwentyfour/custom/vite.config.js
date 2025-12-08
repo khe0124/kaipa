@@ -6,7 +6,7 @@ export default defineConfig(({ command }) => ({
   base:
     command === "serve"
       ? "http://localhost:5173/"
-      : "/wp-content/themes/twentytwentyfour/custom/dist/",
+      : "./", // 상대 경로 사용으로 이미지 경로 문제 해결
   plugins: [],
   server: {
     port: 5173,
@@ -27,10 +27,17 @@ export default defineConfig(({ command }) => ({
     outDir: "../dist",
     emptyOutDir: true,
     manifest: true,
+    assetsDir: "assets", // assets 폴더명 명시
     rollupOptions: {
       input: {
         main: "./src/main.jsx",
         style: "./src/style.css",
+      },
+      output: {
+        // 이미지 파일명에 해시 포함하여 캐싱 최적화
+        assetFileNames: "assets/[name]-[hash][extname]",
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
       },
     },
   },

@@ -20,13 +20,47 @@ export default function ContactForm() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
 
-  const onSubmit = async () => {
+  const onSubmit = async (data) => {
     setSubmitted(false);
-    // TODO: API 연동 지점. 현재는 데모로 대기 후 성공 처리
-    await new Promise((r) => setTimeout(r, 600));
-    setSubmitted(true);
-    reset();
+    setError(null);
+
+    try {
+      // 타임스탬프 추가
+      const payload = {
+        ...data,
+        timestamp: new Date().toLocaleString('ko-KR'),
+      };
+
+      // Google Apps Script 웹훅으로 직접 요청
+      const response = await fetch(process.env.REACT_APP_GOOGLE_SHEETS_WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      // Google Apps Script는 JSON 응답을 반환
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        reset();
+
+        // 5초 후 성공 메시지 자동 숨김
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 5000);
+      } else {
+        throw new Error(result.error || '문의 전송에 실패했습니다.');
+      }
+
+    } catch (err) {
+      setError(err.message || '문의 전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+      console.error('Contact form error:', err);
+    }
   };
 
   return (
@@ -47,6 +81,12 @@ export default function ContactForm() {
           </div>
         )}
 
+        {error && (
+          <div className="mb-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+            {error}
+          </div>
+        )}
+
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="bg-white rounded-2xl border border-grey-200 shadow-sm p-5 sm:p-6 md:p-8"
@@ -59,16 +99,16 @@ export default function ContactForm() {
                 htmlFor="companyName"
                 className="mb-2 text-sm font-semibold text-grey-900"
               >
-                기업명 <span className="text-red-500">*</span>
+                기업 또는 기관명 <span className="text-red-500">*</span>
               </label>
               <input
                 id="companyName"
                 type="text"
                 className="h-11 rounded-lg border border-grey-200 px-3 text-sm outline-none focus:border-primary-200 focus:ring-2 focus:ring-primary-25"
-                placeholder="예) 광주 DevOps"
+                placeholder="예) 한국AI진흥원"
                 aria-invalid={!!errors.companyName}
                 {...register("companyName", {
-                  required: "기업명을 입력해 주세요.",
+                  required: "기업 또는 기관명을 입력해 주세요.",
                 })}
               />
               {errors.companyName && (
@@ -233,7 +273,7 @@ export default function ContactForm() {
             </button>
             <button
               type="submit"
-              className="h-11 rounded-lg px-5 text-sm font-semibold text-white bg-primary-500 hover:bg-primary-600 disabled:opacity-60"
+              className="h-11 rounded-lg px-5 text-sm font-semibold text-white bg-main-500 hover:bg-main-600 disabled:opacity-60"
               disabled={isSubmitting}
             >
               {isSubmitting ? "전송 중..." : "문의 보내기"}

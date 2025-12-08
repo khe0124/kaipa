@@ -41,7 +41,7 @@ export default function MainCarousel() {
   ];
 
   return (
-    <Swiper>
+    <Swiper >
       {carouselList.map((item) => (
         <SwiperSlide key={item.title}>
           <CarouselWrapper title={item.title} description={item.description} image={item.image} />

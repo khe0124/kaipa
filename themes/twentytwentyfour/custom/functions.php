@@ -67,7 +67,7 @@ add_action('wp_enqueue_scripts', 'custom_theme_enqueue_assets');
 
 // 워드프레스가 type="module"을 누락/변경하는 환경 대비: 핸들 강제 모듈 처리
 add_filter('script_loader_tag', function($tag, $handle) {
-    $module_handles = ['vite-client', 'custom-vite-entry'];
+    $module_handles = ['vite-client', 'custom-vite-entry', 'custom-main']; // 'custom-main' 추가
     if (in_array($handle, $module_handles, true)) {
         // 기존 type 속성 유무와 관계없이 module로 강제
         if (strpos($tag, 'type=') === false) {

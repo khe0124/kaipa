@@ -20,7 +20,7 @@ export default function AIEduPage() {
       title: "AI 실무 과정",
       description:
         "기업 업무 자동화, 산업별 AI 활용 사례, 프롬프트 엔지니어링 실습",
-      note: "현업에 바로 적용 가능한 실무 중심 강의",
+      note: "현업에 바로 적용하는 실무 중심 강의",
       icon: Icon02,
     },
     {
@@ -136,7 +136,7 @@ export default function AIEduPage() {
                   <h3 className="text-gray-700 md:text-base text-sm font-bold leading-relaxed mb-4">
                     기업/기관 맞춤형 사내 교육 프로그램
                   </h3>
-                  <p className="text-gray-700 md:text-sm text-xs font-light leading-relaxed">
+                  <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
                     AI 기술을 조직의 실무에 직접 적용할 수 있도록, 기업의 산업
                     특성과 수준에 맞춘 맞춤형 커리큘럼을 제공합니다. 기초
                     인공지능 이해부터 데이터 분석·자동화·생성형 AI 활용까지,
@@ -155,7 +155,7 @@ export default function AIEduPage() {
                   <h3 className="text-gray-700 md:text-base text-sm font-bold leading-relaxed mb-4">
                     공공기관·학교와 협력한 특별 과정 운영
                   </h3>
-                  <p className="text-gray-700 md:text-sm text-xs font-light leading-relaxed">
+                  <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
                     공공기관과 교육기관을 위한 사회 맞춤형 AI 교육 과정을
                     기획·운영합니다. 청소년, 대학생, 공무원 등 다양한 대상에게
                     AI 리터러시와 실습 중심의 프로젝트 교육을 제공하여, 현장

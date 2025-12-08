@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "build:deploy": "vite build && npm run copy:dist",
+    "copy:dist": "node scripts/copy-dist.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

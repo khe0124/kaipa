@@ -25,7 +25,7 @@ export default function Introduce() {
     {
       title: "Connection",
       koreanTitle: "연결",
-      description: "기업 학계 정부를 하나로\n이어 시너지를 만듭니다.",
+      description: "기업, 학계, 정부를 하나로\n이어 시너지를 만듭니다.",
       icon: <HubOutlinedIcon />,
     },
   ];
@@ -41,13 +41,13 @@ export default function Introduce() {
 
           <div className="mb-8 md:mb-12">
             <h2 className="text-gray-900 md:text-3xl text-2xl font-bold mb-6 md:mb-8">
-              AI진흥원은,
+              한국AI진흥원은,
             </h2>
 
             <div className="space-y-4 md:space-y-6">
               <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
-                한국AI진흥원은 인공지능이 우리 사회와 산업 전반에 긍정적인
-                영향을 확산할 수 있도록 설립된 비영리 단체입니다.
+                <span className="font-bold">글로벌 AI 기업 · AI 크리에이터(인플루언서) · 공공기관 · 대한민국 학교</span>를 연결하여
+                AI 기술이 한국 사회 전반에 자연스럽게 확산되도록 돕는 <span className="font-bold">국가 단위 AI 생태계 허브</span>입니다.
               </p>
 
               <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">

@@ -56,16 +56,8 @@ export default function AINetworkingPage() {
             <div className="space-y-4 md:space-y-6">
               <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
                 한국AI진흥원은 AI 전문가, 기업, 연구자, 일반 시민까지 함께
-                성장할 수 있는 네트워킹 기회를 제공합니다.
-              </p>
-
-              <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
-                AI 분야는 빠르게 발전하고 있어 지식 교류와 인적 네트워크가
-                무엇보다 중요합니다.
-              </p>
-
-              <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
-                우리는 회원들이 서로 연결되고, 함께 배우며, 협력할 수 있도록
+                성장할 수 있는 네트워킹 기회를 제공합니다. AI 분야는 빠르게 발전하고 있어 지식 교류와 인적 네트워크가
+                무엇보다 중요합니다.  우리는 회원들이 서로 연결되고, 함께 배우며, 협력할 수 있도록
                 다양한 네트워킹 플랫폼과 행사를 운영합니다.
               </p>
             </div>
@@ -105,14 +97,6 @@ export default function AINetworkingPage() {
                     포럼, 온라인 커뮤니티를 통해 서로의 성장 여정을 이어갑니다.
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="bg-main-500 hover:bg-main-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-sm md:text-base">
-                    커뮤니티 가입하기
-                  </button>
-                  <button className="bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-sm md:text-base">
-                    멤버십 안내 보기
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -146,14 +130,6 @@ export default function AINetworkingPage() {
                     단순한 만남을 넘어, 연구·산업 협력으로 이어지는 실질적
                     네트워크를 지원합니다.
                   </p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="bg-main-500 hover:bg-main-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-sm md:text-base">
-                    다음 행사 일정 보기
-                  </button>
-                  <button className="bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-sm md:text-base">
-                    행사 후기 보기
-                  </button>
                 </div>
               </div>
             </div>

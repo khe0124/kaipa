@@ -4,7 +4,11 @@ import Icon01 from "./images/icon_01.svg";
 import Icon02 from "./images/icon_02.svg";
 import Icon03 from "./images/icon_03.svg";
 import Icon04 from "./images/icon_04.svg";
+import Data01 from "./images/data_01.png";
+import Data02 from "./images/data_02.png";
+
 import Banner01 from "./images/banner.png";
+import MainBgCarousel from "./pages/components/MainBgCarousel";
 
 export default function Home() {
   const coreValueList = [
@@ -79,96 +83,95 @@ export default function Home() {
   return (
     <div className="">
       {/* 히어로 섹션 */}
-      <section className="relative w-full md:h-[600px] h-[400px] flex items-center justify-center bg-gradient-to-br from-blue-900 to-blue-700">
-        <div className="container mx-auto px-4 md:px-8 text-center z-10">
-          <p className="text-white md:text-xl text-base font-light mb-4">
-            AI 교육 · 네트워킹 · 컨퍼런스의 중심,
-          </p>
-          <h1 className="text-white md:text-6xl text-3xl font-black mb-6">
-            한국AI진흥원
-          </h1>
-          <p className="text-white md:text-2xl text-lg font-light mb-8">
-            AI 진흥원은 사람과 기술이 함께 성장하는 세상을 만들어갑니다.
-          </p>
-          <h2 className="text-white md:text-5xl text-2xl font-bold">
-            AI로 더 나은 내일을 설계합니다
-          </h2>
-        </div>
-      </section>
-
-      {/* 소개 섹션 */}
-      <section className="container mx-auto px-4 md:px-8 py-12 md:py-20">
-        <p className="text-gray-700 md:text-xl text-base font-light text-center leading-relaxed max-w-4xl mx-auto">
-          AI 진흥원은 인공지능 기술을 통해 사회적 가치와 산업 경쟁력을 높이고,
-          지속가능한 미래를 위한 혁신의 길을 열어갑니다.
+      <MainBgCarousel />
+      <section className="relative w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-blue-700">
+        <h2 className="text-white md:text-5xl text-3xl font-extrabold mb-4 text-center mt-16">
+          한국 AI 진흥원의 VISION
+        </h2>
+        <p className="text-white md:text-xl text-base font-light text-center leading-relaxed max-w-4xl mx-auto whitespace-pre-wrap">
+          {`AI 진흥원은 인공지능 기술을 통해 사회적 가치와 산업 경쟁력을 높이고,\n지속가능한 미래를 위한 혁신의 길을 열어갑니다.`}
         </p>
+        {/* 주요 기능 카드 섹션 */}
+        <section className="container mx-auto px-4 md:px-8 py-8 md:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {coreValueList.map((item) => (
+              <StrengthCard
+                key={item.title}
+                title={item.title}
+                description={item.description}
+                icon={item.icon}
+              />
+            ))}
+          </div>
+        </section>
       </section>
 
-      {/* 주요 기능 카드 섹션 */}
-      <section className="container mx-auto px-4 md:px-8 py-8 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {coreValueList.map((item) => (
-            <StrengthCard
-              key={item.title}
-              title={item.title}
-              description={item.description}
-              icon={item.icon}
-            />
-          ))}
-        </div>
-      </section>
+
 
       {/* AI 인사이트 섹션 */}
       <section className="container mx-auto px-4 md:px-8 py-12 md:py-20">
         <div className="mb-12 md:mb-16">
-          <h2 className="text-gray-900 md:text-5xl text-3xl font-bold mb-4 text-center">
+          <h2 className="text-gray-900 md:text-5xl text-3xl font-extrabold mb-4 text-center">
             다양한 AI 인사이트
           </h2>
-          <p className="text-gray-600 md:text-xl text-base font-light text-center max-w-3xl mx-auto">
-            AI 진흥원은 연구자, 기업, 그리고 일반 시민까지 모두가 활용할 수 있는
-            종합적인 인공지능 자료와 서비스를 제공합니다.
+          <p className="text-gray-600 md:text-xl text-base font-light text-center max-w-3xl mx-auto whitespace-pre-wrap">
+            {`AI 진흥원은 연구자, 기업, 그리고 일반 시민까지 모두가 활용할 수 있는\n종합적인 인공지능 자료와 서비스를 제공합니다.`}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {/* AI 리소스 센터 */}
-          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <img src={Icon03} alt="리소스" className="w-10 h-10" />
-              <h3 className="text-slate-800 md:text-3xl text-2xl font-bold">
-                AI 리소스 센터
-              </h3>
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="flex flex-col md:flex-row">
+              {/* left: image half */}
+              <div className="md:w-1/3 w-full h-48 md:h-auto">
+                <img src={Data01} alt="AI 리소스 센터" className="w-full h-full object-cover" />
+              </div>
+              {/* right: text half */}
+              <div className="md:w-2/3 w-full p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <h3 className="text-slate-800 md:text-3xl text-2xl font-bold">
+                    AI 리소스 센터
+                  </h3>
+                </div>
+                <ul className="space-y-4">
+                  {resourceCenterList.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-gray-700 md:text-base text-sm">
+                        {item.title}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <ul className="space-y-4">
-              {resourceCenterList.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="text-main-500 text-xl mt-1">•</span>
-                  <span className="text-gray-700 md:text-base text-sm">
-                    {item.title}
-                  </span>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* AI 인사이트 뉴스레터 */}
-          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <img src={Icon04} alt="뉴스레터" className="w-10 h-10" />
-              <h3 className="text-slate-800 md:text-3xl text-2xl font-bold">
-                AI 인사이트 뉴스레터
-              </h3>
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="flex flex-col md:flex-row">
+              {/* left: image half */}
+              <div className="md:w-1/3 w-full h-48 md:h-auto">
+                <img src={Data02} alt="AI 인사이트 뉴스레터" className="w-full h-full object-cover" />
+              </div>
+              {/* right: text half */}
+              <div className="md:w-2/3 w-full p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <h3 className="text-slate-800 md:text-3xl text-2xl font-bold">
+                    AI 인사이트 뉴스레터
+                  </h3>
+                </div>
+                <ul className="space-y-4">
+                  {newsletterList.map((item, index) => (
+                    <li key={index} className="flex items-center gap-3">
+                      <span className="text-gray-700 md:text-base text-sm">
+                        {item.title}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <ul className="space-y-4">
-              {newsletterList.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="text-main-500 text-xl mt-1">•</span>
-                  <span className="text-gray-700 md:text-base text-sm">
-                    {item.title}
-                  </span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
