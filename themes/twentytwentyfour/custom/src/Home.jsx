@@ -8,6 +8,7 @@ import Data01 from "./images/data_01.png";
 import Data02 from "./images/data_02.png";
 
 import Banner01 from "./images/banner.png";
+import { motion } from "framer-motion";
 import MainBgCarousel from "./pages/components/MainBgCarousel";
 
 export default function Home() {
@@ -85,38 +86,66 @@ export default function Home() {
       {/* 히어로 섹션 */}
       <MainBgCarousel />
       <section className="relative w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-blue-700">
-        <h2 className="text-white md:text-5xl text-3xl font-extrabold mb-4 text-center mt-16">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          whileInView={{ opacity: 1 }}
+          className="text-white md:text-5xl text-3xl font-extrabold mb-4 text-center mt-16"
+        >
           한국 AI 진흥원의 VISION
-        </h2>
-        <p className="text-white md:text-xl text-base font-light text-center leading-relaxed max-w-4xl mx-auto whitespace-pre-wrap">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-white md:text-xl text-base font-light text-center leading-relaxed max-w-4xl mx-auto whitespace-pre-wrap"
+        >
           {`AI 진흥원은 인공지능 기술을 통해 사회적 가치와 산업 경쟁력을 높이고,\n지속가능한 미래를 위한 혁신의 길을 열어갑니다.`}
-        </p>
+        </motion.p>
         {/* 주요 기능 카드 섹션 */}
         <section className="container mx-auto px-4 md:px-8 py-8 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {coreValueList.map((item) => (
-              <StrengthCard
+            {coreValueList.map((item, index) => (
+              <motion.div
                 key={item.title}
-                title={item.title}
-                description={item.description}
-                icon={item.icon}
-              />
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              >
+                <StrengthCard
+                  key={item.title}
+                  title={item.title}
+                  description={item.description}
+                  icon={item.icon}
+                />
+              </motion.div>
             ))}
           </div>
         </section>
       </section>
 
-
-
       {/* AI 인사이트 섹션 */}
       <section className="container mx-auto px-4 md:px-8 py-12 md:py-20">
         <div className="mb-12 md:mb-16">
-          <h2 className="text-gray-900 md:text-5xl text-3xl font-extrabold mb-4 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            whileInView={{ opacity: 1 }}
+            className="text-gray-900 md:text-5xl text-3xl font-extrabold mb-4 text-center"
+          >
             다양한 AI 인사이트
-          </h2>
-          <p className="text-gray-600 md:text-xl text-base font-light text-center max-w-3xl mx-auto whitespace-pre-wrap">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            whileInView={{ opacity: 1 }}
+            className="text-gray-600 md:text-xl text-base font-light text-center max-w-3xl mx-auto whitespace-pre-wrap"
+          >
             {`AI 진흥원은 연구자, 기업, 그리고 일반 시민까지 모두가 활용할 수 있는\n종합적인 인공지능 자료와 서비스를 제공합니다.`}
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -125,7 +154,11 @@ export default function Home() {
             <div className="flex flex-col md:flex-row">
               {/* left: image half */}
               <div className="md:w-1/3 w-full h-48 md:h-auto">
-                <img src={Data01} alt="AI 리소스 센터" className="w-full h-full object-cover" />
+                <img
+                  src={Data01}
+                  alt="AI 리소스 센터"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* right: text half */}
               <div className="md:w-2/3 w-full p-6 md:p-8">
@@ -152,7 +185,11 @@ export default function Home() {
             <div className="flex flex-col md:flex-row">
               {/* left: image half */}
               <div className="md:w-1/3 w-full h-48 md:h-auto">
-                <img src={Data02} alt="AI 인사이트 뉴스레터" className="w-full h-full object-cover" />
+                <img
+                  src={Data02}
+                  alt="AI 인사이트 뉴스레터"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* right: text half */}
               <div className="md:w-2/3 w-full p-6 md:p-8">
