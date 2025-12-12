@@ -237,6 +237,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="relative py-16 md:py-28"></section>
     </div>
   );
 }

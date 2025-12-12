@@ -6,9 +6,9 @@ import Introduce from "./pages/Introduce.jsx";
 import ExpertList from "./pages/ExpertList.jsx";
 import ExpertDetailPage from "./pages/ExpertDetail.jsx";
 import AIEdu from "./pages/biz/AIEdu.jsx";
+import AIBiz from "./pages/biz/AIBiz.jsx";
 import AIExpert from "./pages/biz/AIExpert.jsx";
 import AINetworking from "./pages/biz/AINetworking.jsx";
-
 import Blog from "./pages/news/Blog.jsx";
 import Home from "./Home.jsx";
 import Contact from "./pages/components/ContactForm.jsx";
@@ -43,6 +43,8 @@ function initializeApp() {
   /* 전문가 목록 화면 */
   mountIfExists("expert-list-page", <ExpertList />);
   mountIfExists("expert-detail-page", <ExpertDetailPage />);
+  /* AI 기업 화면 */
+  mountIfExists("ai-biz-page", <AIBiz />);
   /* AI 교육 화면 */
   mountIfExists("ai-edu-page", <AIEdu />);
   /* AI 전문가 화면 */

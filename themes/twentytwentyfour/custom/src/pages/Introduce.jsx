@@ -46,11 +46,15 @@ export default function Introduce() {
 
             <div className="space-y-4 md:space-y-6">
               <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
-                <span className="font-bold">글로벌 AI 기업 · AI 크리에이터(인플루언서) · 공공기관 · 대한민국 학교</span>를 연결하여
-                AI 기술이 한국 사회 전반에 자연스럽게 확산되도록 돕는 <span className="font-bold">국가 단위 AI 생태계 허브</span>입니다.
+                <span className="font-bold">
+                  글로벌 AI 기업 · AI 크리에이터(인플루언서) · 공공기관 ·
+                  대한민국 학교
+                </span>
+                를 연결하여 AI 기술이 한국 사회 전반에 자연스럽게 확산되도록
+                돕는 <span className="font-bold">국가 단위 AI 생태계 허브</span>
+                입니다.
               </p>
-
-              <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
+              {/* <p className="text-gray-700 md:text-lg text-base font-light leading-relaxed">
                 우리는 AI 교육을 통해 국민의 디지털 역량을 높이고, 산업 현장에서
                 AI 기술이 실질적으로 활용될 수 있도록 지원하며, 기업·학계·정부
                 간 협력을 촉진하는 역할을 수행합니다.
@@ -60,7 +64,128 @@ export default function Introduce() {
                 또한 국내외 전문가와 함께하는 컨퍼런스와 세미나, 현장 중심의
                 교육 프로그램, 그리고 정책 제안 및 연구 활동을 통해 대한민국이
                 글로벌 AI 혁신 허브로 자리매김할 수 있도록 노력하고 있습니다.
+              </p> */}
+            </div>
+          </div>
+
+          {/* 비전, 미션, 핵심 가치, 생태계 섹션 */}
+          <div className="mt-12 md:mt-16 space-y-8 md:space-y-12">
+            {/* 비전 */}
+            <div className="bg-gradient-to-r from-main-500 to-main-600 rounded-xl p-6 md:p-10 text-white">
+              <h3 className="text-white md:text-3xl text-2xl font-bold mb-4 md:mb-6 flex items-center gap-2">
+                <span className="text-2xl md:text-3xl">▶</span>
+                비전 (Vision)
+              </h3>
+              <p className="text-white md:text-xl text-lg font-semibold leading-relaxed">
+                "한국을 AI 교육·정책·콘텐츠·비즈니스의 글로벌 허브로 만든다."
               </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {/* 미션 */}
+              <div className="bg-slate-50 rounded-xl p-6 md:p-10 border border-main-500">
+                <h3 className="text-slate-800 md:text-3xl text-2xl font-bold mb-6 md:mb-8 flex items-center gap-2">
+                  <span className="text-2xl md:text-3xl">▶</span>
+                  미션 (Mission)
+                </h3>
+                <ul className="space-y-3 md:space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="text-main-500 font-bold mt-1">•</span>
+                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                      해외 AI 기업이 한국 시장에 성공적으로 진입하도록 지원
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-main-500 font-bold mt-1">•</span>
+                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                      국내 공공기관과 교육기관의 AI 도입 가속화
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-main-500 font-bold mt-1">•</span>
+                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                      AI 인플루언서 및 크리에이터 커뮤니티 활성화
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-main-500 font-bold mt-1">•</span>
+                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                      정부·기업·교육계를 연결하는 'AI 교류 플랫폼' 구축
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* 핵심 가치 */}
+              <div className="bg-slate-50 rounded-xl p-6 md:p-10 border border-main-500">
+                <h3 className="text-slate-800 md:text-3xl text-2xl font-bold mb-6 md:mb-8 flex items-center gap-2">
+                  <span className="text-2xl md:text-3xl">▶</span>
+                  핵심 가치 (Core Values)
+                </h3>
+                <ul className="space-y-3 md:space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="text-main-500 font-bold mt-1">•</span>
+                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                      <span className="font-bold text-slate-800">
+                        고객 성공 중심
+                      </span>{" "}
+                      : 해외 AI 기업과 기관의 성공을 최우선으로
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-main-500 font-bold mt-1">•</span>
+                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                      <span className="font-bold text-slate-800">
+                        경계를 넘는 혁신
+                      </span>{" "}
+                      : 글로벌 트렌드와 로컬 니즈를 잇는 창의적 솔루션
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-main-500 font-bold mt-1">•</span>
+                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                      <span className="font-bold text-slate-800">
+                        지속 가능한 에코시스템 구축
+                      </span>{" "}
+                      : 단기 홍보가 아닌 장기 성장 기반 지원
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* KAIPA가 만드는 생태계 */}
+            <div className="bg-slate-50 rounded-xl p-6 md:p-10 border border-main-500">
+              <h3 className="text-slate-800 md:text-3xl text-2xl font-bold mb-6 md:mb-8 flex items-center gap-2">
+                <span className="text-2xl md:text-3xl">▶</span>
+                KAIPA가 만드는 생태계
+              </h3>
+              <ul className="space-y-3 md:space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-main-500 font-bold mt-1">•</span>
+                  <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                    해외 AI 기업 → 한국 시장 진입
+                  </p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-main-500 font-bold mt-1">•</span>
+                  <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                    AI 크리에이터 → 기술 확산 및 콘텐츠 유통
+                  </p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-main-500 font-bold mt-1">•</span>
+                  <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                    공공기관/교육기관 → AI 도입 및 체계 구축
+                  </p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-main-500 font-bold mt-1">•</span>
+                  <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
+                    한국 기업 → 글로벌 AI 솔루션과 협력
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
 

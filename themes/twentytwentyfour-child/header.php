@@ -46,7 +46,7 @@
           </div>
         </div>
         
-        <a href="<?php echo esc_url(home_url('/cases')); ?>" class="text-sm lg:text-base text-gray-700 hover:text-main-500 transition-colors py-2">교육사례</a>
+        <a href="<?php echo esc_url(home_url('/cases')); ?>" class="text-sm lg:text-base text-gray-700 hover:text-main-500 transition-colors py-2">성공사례</a>
         
         <!-- 진흥원 소식 드롭다운 -->
         <div class="relative group">
@@ -130,7 +130,7 @@
             </div>
           </div>
           
-          <a href="<?php echo esc_url(home_url('/cases')); ?>" class="px-6 py-3 text-base text-gray-700 hover:bg-gray-50 hover:text-main-500 transition-colors touch-manipulation border-b border-gray-100">교육사례</a>
+          <a href="<?php echo esc_url(home_url('/cases')); ?>" class="px-6 py-3 text-base text-gray-700 hover:bg-gray-50 hover:text-main-500 transition-colors touch-manipulation border-b border-gray-100">성공사례</a>
           
           <!-- 진흥원 소식 서브메뉴 -->
           <div class="border-b border-gray-100">
