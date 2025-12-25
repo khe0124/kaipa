@@ -73,7 +73,7 @@ export default function Introduce() {
             {/* 비전 */}
             <div className="bg-gradient-to-r from-main-500 to-main-600 rounded-xl p-6 md:p-10 text-white">
               <h3 className="text-white md:text-3xl text-2xl font-bold mb-4 md:mb-6 flex items-center gap-2">
-                <span className="text-2xl md:text-3xl">▶</span>
+
                 비전 (Vision)
               </h3>
               <p className="text-white md:text-xl text-lg font-semibold leading-relaxed">
@@ -81,83 +81,78 @@ export default function Introduce() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 gap-6 md:gap-8">
               {/* 미션 */}
               <div className="bg-slate-50 rounded-xl p-6 md:p-10 border border-main-500">
-                <h3 className="text-slate-800 md:text-3xl text-2xl font-bold mb-6 md:mb-8 flex items-center gap-2">
-                  <span className="text-2xl md:text-3xl">▶</span>
+                <h3 className="text-slate-800 md:text-3xl text-center text-2xl font-bold mb-6 md:mb-8">
                   미션 (Mission)
                 </h3>
-                <ul className="space-y-3 md:space-y-4">
-                  <li className="flex items-start gap-3">
-                    <span className="text-main-500 font-bold mt-1">•</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                  <div className="bg-white rounded-lg p-5 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
-                      해외 AI 기업이 한국 시장에 성공적으로 진입하도록 지원
+                      해외 AI 기업이 한국시장에 성공적으로 진입하도록 지원
                     </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-main-500 font-bold mt-1">•</span>
+                  </div>
+                  <div className="bg-white rounded-lg p-5 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
                       국내 공공기관과 교육기관의 AI 도입 가속화
                     </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-main-500 font-bold mt-1">•</span>
+                  </div>
+                  <div className="bg-white rounded-lg p-5 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
                       AI 인플루언서 및 크리에이터 커뮤니티 활성화
                     </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-main-500 font-bold mt-1">•</span>
+                  </div>
+                  <div className="bg-white rounded-lg p-5 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
                       정부·기업·교육계를 연결하는 'AI 교류 플랫폼' 구축
                     </p>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
 
-              {/* 핵심 가치 */}
-              <div className="bg-slate-50 rounded-xl p-6 md:p-10 border border-main-500">
-                <h3 className="text-slate-800 md:text-3xl text-2xl font-bold mb-6 md:mb-8 flex items-center gap-2">
-                  <span className="text-2xl md:text-3xl">▶</span>
-                  핵심 가치 (Core Values)
-                </h3>
-                <ul className="space-y-3 md:space-y-4">
-                  <li className="flex items-start gap-3">
-                    <span className="text-main-500 font-bold mt-1">•</span>
-                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
-                      <span className="font-bold text-slate-800">
-                        고객 성공 중심
-                      </span>{" "}
-                      : 해외 AI 기업과 기관의 성공을 최우선으로
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-main-500 font-bold mt-1">•</span>
-                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
-                      <span className="font-bold text-slate-800">
-                        경계를 넘는 혁신
-                      </span>{" "}
-                      : 글로벌 트렌드와 로컬 니즈를 잇는 창의적 솔루션
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-main-500 font-bold mt-1">•</span>
-                    <p className="text-gray-700 md:text-base text-sm font-light leading-relaxed">
-                      <span className="font-bold text-slate-800">
-                        지속 가능한 에코시스템 구축
-                      </span>{" "}
-                      : 단기 홍보가 아닌 장기 성장 기반 지원
-                    </p>
-                  </li>
-                </ul>
-              </div>
             </div>
+            {/* Core Value 섹션 */}
+            <section className="bg-main-500 py-12 md:py-20 rounded-xl">
+              <div className="container mx-auto px-4 md:px-8">
+                <div className="max-w-4xl mx-auto">
+                  <h2 className="text-white md:text-5xl text-3xl font-bold mb-4 md:mb-6 text-center">
+                    Core Value
+                  </h2>
+                  <p className="text-white md:text-2xl text-xl font-semibold mb-12 md:mb-16 text-center">
+                    핵심 가치
+                  </p>
 
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    {coreValueList.map((item) => (
+                      <div
+                        key={item.title}
+                        className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-2xl transition-all duration-300"
+                      >
+                        <div className="flex flex-col items-center justify-center gap-3 mb-4 md:mb-6">
+                          <IconButton>{item.icon}</IconButton>
+                          <div className="flex flex-col items-center justify-center">
+                            <h3 className="text-slate-800 md:text-2xl text-xl font-bold text-center">
+                              {item.title}
+                            </h3>
+                            <p className="text-gray-600 md:text-base text-sm font-semibold text-center">
+                              {item.koreanTitle}
+                            </p>
+                          </div>
+                        </div>
+                        <p className="text-gray-700 md:text-base text-sm text-center font-light whitespace-pre-wrap leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
             {/* KAIPA가 만드는 생태계 */}
             <div className="bg-slate-50 rounded-xl p-6 md:p-10 border border-main-500">
               <h3 className="text-slate-800 md:text-3xl text-2xl font-bold mb-6 md:mb-8 flex items-center gap-2">
-                <span className="text-2xl md:text-3xl">▶</span>
+
                 KAIPA가 만드는 생태계
               </h3>
               <ul className="space-y-3 md:space-y-4">
@@ -189,66 +184,10 @@ export default function Introduce() {
             </div>
           </div>
 
-          {/* 설립 목적 및 주요 활동 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <div className="bg-slate-50 rounded-xl p-6 md:p-8 border border-main-500">
-              <h3 className="text-slate-800 text-center md:text-2xl text-xl font-bold mb-4">
-                설립 목적
-              </h3>
-              <p className="text-gray-700 text-center md:text-base text-sm font-light">
-                한국 내 AI 교육 확산, 산업 발전 기여
-              </p>
-            </div>
-
-            <div className="bg-slate-50 rounded-xl p-6 md:p-8 border border-main-500">
-              <h3 className="text-slate-800 text-center md:text-2xl text-xl font-bold mb-4">
-                주요 활동
-              </h3>
-              <p className="text-gray-700 text-center md:text-base text-sm font-light">
-                교육, 컨퍼런스, 정책 제안, 기업·학계·정부 연계
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Core Value 섹션 */}
-      <section className="bg-main-500 py-12 md:py-20">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-white md:text-5xl text-3xl font-bold mb-4 md:mb-6 text-center">
-              Core Value
-            </h2>
-            <p className="text-white md:text-2xl text-xl font-semibold mb-12 md:mb-16 text-center">
-              핵심 가치
-            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {coreValueList.map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-2xl transition-all duration-300"
-                >
-                  <div className="flex flex-col items-center justify-center gap-3 mb-4 md:mb-6">
-                    <IconButton>{item.icon}</IconButton>
-                    <div className="flex flex-col items-center justify-center">
-                      <h3 className="text-slate-800 md:text-2xl text-xl font-bold text-center">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 md:text-base text-sm font-semibold text-center">
-                        {item.koreanTitle}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 md:text-base text-sm text-center font-light whitespace-pre-wrap leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

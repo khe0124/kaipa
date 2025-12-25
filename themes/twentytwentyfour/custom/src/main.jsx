@@ -9,6 +9,7 @@ import AIEdu from "./pages/biz/AIEdu.jsx";
 import AIBiz from "./pages/biz/AIBiz.jsx";
 import AIExpert from "./pages/biz/AIExpert.jsx";
 import AINetworking from "./pages/biz/AINetworking.jsx";
+import AICaseStudy from "./pages/biz/AICaseStudy.jsx";
 import Blog from "./pages/news/Blog.jsx";
 import Home from "./Home.jsx";
 import Contact from "./pages/components/ContactForm.jsx";
@@ -51,6 +52,8 @@ function initializeApp() {
   mountIfExists("ai-expert-page", <AIExpert />);
   /* AI 네트워킹 화면 */
   mountIfExists("ai-networking-page", <AINetworking />);
+  /* AI 성공사례 화면 */
+  mountIfExists("success-case-study-page", <AICaseStudy />);
 
   mountIfExists("blog-page", <Blog />);
   mountIfExists("contact-page", <Contact />);
