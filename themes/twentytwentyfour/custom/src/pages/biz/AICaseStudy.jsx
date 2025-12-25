@@ -86,7 +86,7 @@ export default function AICaseStudyPage() {
                             slidesPerView={2}
                             spaceBetween={30}
                             autoplay={{
-                                delay: 0,
+                                delay: ㄴ0,
                                 disableOnInteraction: false,
                                 pauseOnMouseEnter: true,
                             }}
